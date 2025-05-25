@@ -430,3 +430,8 @@ body {
     font-size: 0.8rem; 
     color: rgba(255, 255, 255, 0.7);
 }
+
+.footer a {
+    color: #ffffff; 
+    text-decoration: underline; 
+}
