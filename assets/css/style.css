@@ -119,6 +119,13 @@ body {
     color: #0f204a;
 }
 
+.materiais-description-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 2rem; 
+}
+
 .materiais-content {
     display: flex;
     flex-direction: column;
