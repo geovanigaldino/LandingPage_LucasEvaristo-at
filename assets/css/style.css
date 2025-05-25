@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero {
+    background: url("../img/background-pagina-inicial.svg") no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; 
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.hero-content h1 span { 
+    font-weight: 500;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;    
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero-img {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        gap: 2rem;
+    }
+
+    .hero-content,
+    .hero-img {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Seção Materials */
+.materiais {
+    background: #f9f9f9;
+    padding: 2rem 0;
+}
+
+.materiais-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    color: #0f204a;
+}
+
+.materiais-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 2rem; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 2rem; 
+    background-color: #ffffff;
+    border-radius: 8px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+}
+
+.materiais-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #0f204a;
+}
+
+.materiais-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #0f204a;
+    text-align: center;
+}
+
+/* Estilos para todas as listas de materiais (tanto jogos quanto fichas) */
+.material-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+    width: 100%;
+}
+
+/* Estilos para cada item de material (o card individual) */
+.material-item {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.material-item:hover {
+    box-shadow: 0 8px 16px rgba(74, 144, 226, 0.3);
+    transform: translateY(-5px);
+}
+
+.material-item > div { 
+    margin-bottom: 1rem; 
+}
+
+.material-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0f204a;
+}
+
+.material-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+    flex-grow: 1;
+}
+
+.download-btn {
+    background: #0f204a;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 700;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(74,144,226,0.5);
+    transition: background-color 0.3s ease;
+    user-select: none;
+    align-self: center; 
+    margin-top: auto;
+}
+
+.download-btn:hover,
+.download-btn:focus {
+    background: #0b3cb6;
+    outline: none;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) { 
+    .material-list {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    }
+
+    .materiais-content {
+        padding: 0 1rem; 
+    }
+}
+
+@media (max-width: 600px) {
+    .material-item {
+      flex-direction: column; 
+      align-items: flex-start;
+    }
+    .material-item > div { 
+        margin-bottom: 0.5rem;
+    }
+    .download-btn {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem;
+    }
+    
+    .material-list {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Seção About */
+.about {
+    background-color: #ffffff;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    color: #0f204a;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 3rem; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 2rem; 
+}
+
+.about-img {
+    max-width: 40%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    max-width: 60%;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #0f204a;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Media Query para responsividade */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 1.5rem;
+        gap: 1.5rem; 
+    }
+
+    .about-img,
+    .about-text {
+        max-width: 90%;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .about-title {
+        font-size: 2rem; /
+    }
+}
+
+/* Seção Contact */
+.contact {
+    background: #f0f0f0; 
+    padding: 4rem 1rem; 
+    text-align: center; 
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0f204a; 
+    font-weight: 900;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2.5rem; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 2rem; 
+    margin-top: 2rem; 
+}
+
+.contact-link {
+    display: flex; 
+    padding: 0.8rem; 
+    border-radius: 50%; 
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(74, 144, 226, 0.3); 
+}
+
+.contact-links img {
+    width: 40px; 
+    height: 40px;
+    display: block; 
+}
+
+/* Media Query para responsividade */
+@media (max-width: 600px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-text {
+        font-size: 1rem;
+        padding: 0 1rem; 
+    }
+
+    .contact-links {
+        flex-wrap: wrap; 
+        gap: 1.5rem; 
+    }
+
+    .contact-links img {
+        width: 35px; 
+        height: 35px;
+    }
+}
+
+/* Seção Footer */
+.footer {
+    background-color: #0f204a;
+    color: #ffffff; 
+    padding: 1.5rem 1rem; 
+    text-align: center; 
+    font-size: 0.9rem; 
+    line-height: 1.5; 
+}
+
+.footer p {
+    margin: 0.5rem 0; 
+}
+
+.footer small {
+    display: block; 
+    font-size: 0.8rem; 
+    color: rgba(255, 255, 255, 0.7);
+}
