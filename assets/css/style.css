@@ -139,11 +139,12 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
 }
 
-.materiais-content h3 {
+.materiais-subtitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
     color: #0f204a;
+    text-align: center;
 }
 
 .materiais-content h4 {
@@ -157,7 +158,7 @@ body {
 /* Estilos para todas as listas de materiais (tanto jogos quanto fichas) */
 .material-list {
     list-style: none;
-    padding: 0;
+    padding: 2rem;
     margin: 0;
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
