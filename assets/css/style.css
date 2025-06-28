@@ -47,7 +47,8 @@ body {
 
 .hero h2 {
     font-size: 2.8rem;
-    margin-bottom: 0.5rem;    
+    margin-bottom: 0.5rem;
+    line-height: 1.2;    
 }
 
 .hero p {
@@ -130,7 +131,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    gap: 2rem; 
     max-width: 1000px; 
     margin: 0 auto; 
     padding: 2rem; 
